@@ -1,6 +1,13 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import rootReducer from './../reducers/main.js';
-import exampleVideoData from '../data/exampleVideoData.js';
+import Redux from 'redux';
+//type = CHANGE_CURRENT_VIDEO
+var currentVideoReducer = (state = null, action) => {
+  //TODO: define a reducer for the currentVideo field of our state.
+  switch (action.type) {
+  case 'CHANGE_VIDEO':
+    return Object.assign({}, state, action.video);
+  default:
+    return state;
+  }
+};
 
-// TODO:  Create your redux store, apply thunk as a middleware, and export it!
+export default currentVideoReducer;
