@@ -1,4 +1,5 @@
 import Redux from 'redux';
+
 let sampleData = [];
 // '{type: 'CHANGE_VIDEO_LIST'}' action is changing video
 var videoListReducer = (state = sampleData, action) => {
